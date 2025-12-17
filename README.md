@@ -51,21 +51,32 @@ src/
 │   ├── api/
 │   │   └── client.ts
 │   ├── components/
-│   │   └── Navbar.svelte
-│   └── stores/
-│       └── auth.ts
+│   │   ├── Navbar.svelte
+│   │   ├── Sidebar.svelte
+│   │   ├── Loader.svelte
+│   │   └── Protected.svelte
+│   ├── stores/
+│   │   └── auth.ts
+│   └── schemas/
+│       └── auth.schema.ts
 │
 ├── routes/
-│   ├── dashboard/
-│   │   ├── +page.server.ts
-│   │   └── +page.svelte
+│   ├── +layout.svelte
+│   ├── +page.svelte          // landing / redirect
 │   ├── login/
 │   │   └── +page.svelte
-│   ├── logout/
-│   │   └── +page.server.ts
-│   └── +page.svelte
+│   ├── register/
+│   │   └── +page.svelte
+│   ├── dashboard/
+│   │   └── +page.svelte
+│   ├── campaigns/
+│   │   └── +page.svelte
+│   ├── campaigns/new/
+│   │   └── +page.svelte
+│   └── logout/
+│       └── +page.server.ts
 │
-└── app.css
+└── app.css  
 # Bulk Email Automation Backend
 
 This is the backend service for a **Bulk Email Automation / Email Campaign Management System** built with **Node.js, TypeScript, Hono, MongoDB, and Nodemailer**. It supports SMTP configuration, bulk & scheduled email sending, batch processing, email logs, and dashboard analytics.
